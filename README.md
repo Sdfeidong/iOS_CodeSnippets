@@ -155,5 +155,6 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 - `timeConsuming` - 展开一段用 `CACurrentMediaTime()` 来计算方法耗时的代码
 
 # 链接
-GitHub：[https://github.com/Sdfeidong/iOS_CodeSnippets](https://github.com/Sdfeidong/iOS_CodeSnippets)
-博客地址：[http://blog.csdn.net/aaidong/article/details/78770671](http://blog.csdn.net/aaidong/article/details/78770671)
+- `GitHub`：[https://github.com/Sdfeidong/iOS_CodeSnippets](https://github.com/Sdfeidong/iOS_CodeSnippets)
+- `博客地址`：[http://blog.csdn.net/aaidong/article/details/78770671](http://blog.csdn.net/aaidong/article/details/78770671)
+
