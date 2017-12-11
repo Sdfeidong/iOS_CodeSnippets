@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>create_alert_tf</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 创建alert
+- (void)createAlertTextFieldController {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"新建笔记" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"点击取消");
+    }]];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        UITextField *tf = alertController.textFields.firstObject;
+        
+        // do something...
+        NSLog(@"hahah : %@",tf.text);
+        
+        // remove UITextFieldTextDidChangeNotification
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
+    }];
+    // 在输入文字前，我们要冻结“确定”按钮
+    okAction.enabled = NO;
+    [alertController addAction:okAction];
+    
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        
+        textField.placeholder = @"请输入笔记名称";
+        // 是否安全输入
+        textField.secureTextEntry = NO;
+        // 添加一个通知，改变okAction的状态
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alertTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:textField];
+    }];
+    
+    [self presentViewController:alertController animated:YES completion:^{
+        
+    }];
+}
+// TextFieldTextDidChange 的通知处理方法
+- (void)alertTextFieldDidChange:(NSNotification *)notification{
+    
+    UIAlertController *alertController = (UIAlertController *)self.presentedViewController;
+    if (alertController) {
+        UITextField *tf = alertController.textFields.firstObject;
+        UIAlertAction *okAction = alertController.actions.lastObject;
+        // 设置okAction的状态，是否可点击
+        okAction.enabled = tf.text.length &gt; 0;
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>43BB4D36-9881-4572-B44A-D76BFA9313F5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>create_alert_tf</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>create_alertSheet</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"支付方式" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];;
+// action
+UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"微信" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    
+}];
+UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"支付宝" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    
+}];
+// 取消 红色
+UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    
+}];
+
+[alertController addAction:action0];
+[alertController addAction:action1];
+[alertController addAction:action2];
+
+[self presentViewController:self animated:YES completion:^{
+    
+}];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>ADDCA7B9-C5B5-417A-8FE6-C05ED6B9B41A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>创建一个列表式的alert</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>create_alertSheet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

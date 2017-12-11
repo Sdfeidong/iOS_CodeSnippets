@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>create_alert_sure_or_cancle</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"确认要删除吗？" preferredStyle:UIAlertControllerStyleAlert];
+[alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    // 点击取消
+    
+}]];
+[alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    // 点击确定
+    
+}]];
+[self presentViewController:alert animated:YES completion:^{
+    
+}];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9B855B3B-FBB9-4377-8648-131CCB2B0868</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>带确定和取消的提示框</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>create_alert_sure_or_cancle</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

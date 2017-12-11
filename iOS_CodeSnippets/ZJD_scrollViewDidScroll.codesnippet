@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>scrollViewDidScroll</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - 取消tableView分区的区头粘性（悬停效果）
+// UITableView继承自UIScrollView,可以直接使用其代理方法
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    // 如果tableview中有多个不同高度的section，建议不要用此方法
+    // 实际 sectionHeader 的高度
+    CGFloat sectionHeaderHeight = &lt;#CGFloat#&gt;;
+    
+    if (scrollView.contentOffset.y &lt;= sectionHeaderHeight &amp;&amp; scrollView.contentOffset.y &gt;= 0) {
+        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+    }
+    else if(scrollView.contentOffset.y &gt;= sectionHeaderHeight) {
+        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C2371E6E-03BF-4C0F-B8DB-5221BBF8EC4B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>取消tableView分区的区头粘性（悬停效果）</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>scrollViewDidScroll</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

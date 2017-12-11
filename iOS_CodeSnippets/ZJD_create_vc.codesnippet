@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>create_vc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 替换 ViewController
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    // 加载自定义导航
+    [self layoutNav];
+    // 其它view
+    [self layoutOtherView];
+    // ...
+    
+    // 初始化数据
+    [self initData];
+    // 添加通知
+    [self addNotification];
+}
+#pragma mark - viewWillAppear
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+}
+// 自定义导航
+- (void)layoutNav {
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    NSString *navTitle = @"导航";
+    [self createNavWithTitle:navTitle createMenuItem:^UIView *(int nIndex) {
+        
+        if (nIndex == 0){
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [btn setFrame:CGRectMake(0, (self.navView.height - KNaVButtonHeight)/2, kNavButtonWidth, KNaVButtonHeight)];
+            UIImage *image = [UIImage imageNamed:@"返回白"];
+            // [btn setTitle:@"返回" forState:UIControlStateNormal];
+            [btn setImage:image forState:UIControlStateNormal];
+            [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [btn addTarget:self action:@selector(backBtnAction) forControlEvents:UIControlEventTouchUpInside];
+            return btn;
+        }
+        
+        return nil;
+    }];
+    
+    // 放在此处以免 block造成的异步。
+    self.navIV.backgroundColor = [UIColor orangeColor];
+    // 默认不透明
+    self.navIV.alpha = 1;
+}
+// 其它view
+- (void)layoutOtherView {
+    
+}
+
+#pragma mark - 初始化数据
+- (void)initData {
+    
+}
+
+#pragma mark - BtnAction
+
+#pragma mark - Notification
+- (void)addNotification {
+    
+    // [NNC_DC addObserver:self selector:@selector(&lt;#selector#&gt;) name:&lt;#(nullable NSNotificationName)#&gt; object:nil];
+}
+/**
+ - (void)nameNoti:(NSNotification *)noti {
+ 
+ NSDictionary *dictObject = [noti object];
+ NSDictionary *dictInfo = [noti userInfo];
+ }
+ */
+#pragma mark - Self
+- (void)dealloc {
+    
+    // 移除self的所有通知
+    // [NNC_DC removeObserver:self];
+    // ...
+}
+- (void)didReceiveMemoryWarning {
+    
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+@end
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>347F5252-8413-419E-AA99-1C62FB678809</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>继承于BasicViewController 空白页面</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>create_vc</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
