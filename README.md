@@ -1,17 +1,17 @@
-# ios-codesnippets
-[ios-codesnippets](https://github.com/Sdfeidong/ios-codesnippets) 是对  [qmui-ios-codesnippets](https://github.com/QMUI/qmui-ios-codesnippets) 的一个补充，主要是一些常见UI的快速创建代码集。配合 [ZJDKit](https://github.com/Sdfeidong/ZJDKit.git) 使用效果可能会更好。
+# iOS_CodeSnippets
+[iOS_CodeSnippets](https://github.com/Sdfeidong/iOS_CodeSnippets) 是对  [qmui-ios-codesnippets](https://github.com/QMUI/qmui-ios-codesnippets) 的一个补充，主要是一些常见UI的快速创建代码集。配合 [ZJDKit](https://github.com/Sdfeidong/ZJDKit.git) 使用效果可能会更好。
 
 ### 使用方式
 Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/CodeSnippets ` 目录，只要直接把 `*.codesnippets` 文件放到这个目录下（若没有则自己创建），重启 Xcode 即可生效。
 
 ### 快捷键汇总
-####UIAlertController
+#### UIAlertController
 - `create_alert_sure_or_cancle` - 创建一个普通的带“确定”和“取消”按钮的alert
 - `create_alert_tf` - 创建一个带UITextField的alert
 - `create_alertSheet` - 创建一个sheet式的alert
 
 
-####UIView
+#### UIView
 - `create_btn` - 创建一个UIButton
 - `create_iv` - 创建一个UIImageView
 - `create_keyWindow` - 快速创建keyWindow
@@ -20,13 +20,13 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 - `create_view` - 创建一个UIView
 
 
-####BasicViewController
+#### BasicViewController
 - `create_vc` - 创建一个空白的继承于“BasicViewController”的控制器
 - `create_vc_tableview` - 创建一个继承于“BasicViewController”，带“UITableView”的控制器
 - `create_vc_collectionview` - 创建一个继承于“BasicViewController”，带“UICollectionView”的控制器
 
 
-####Other
+#### Other
 - `create_keyWindow` - 快速创建keyWindow
 - `mark` - #pragma mark - 标记
 - `scrollViewDidScroll` - 取消tableView分区的区头粘性（悬停效果）
@@ -52,7 +52,7 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 注意，Xcode 对每一段 Code Snippet 都有规定适用的语言（Objective-C、Objective-C++、Swift、...）和作用域（如 Class 的 Interface 定义内、Class 的 Implementation 内、方法体内、...），所以测试某段 Code Snippet 不生效时请注意你当前是否处于不匹配的位置。
 
 ### 快捷键汇总
-####NSObject
+#### NSObject
 - `pa` - 定义一个 `assign` 的 property
 - `pc` - 定义一个 `copy` 的 property
 - `ps` - 定义一个 `strong` 的property
@@ -67,14 +67,14 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 - `replaceMethod_QMUI` - QMUI 重写当前类的 `load` 方法并用 `ReplaceMethod()` 函数替换方法的实现
 
 
-####Block
+#### Block
 - `blockArguments` - 声明一个用于方法参数的 block
 - `blockproperty` - 声明一个用于 property 的 block
 - `blocktypedef` - 用 `typedef` 定义一个 block
 - `blockvar` - 定义一个作为局部变量的 block
 
 
-####Method & Function
+#### Method & Function
 - `fnv` - 定义一个返回值为 `void` 的方法
 - `fnv:` - 定义一个返回值为 `void` 且带参数的方法
 - `fnblock` - 定义一个返回值类型为 block 的方法
@@ -84,7 +84,7 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 - `fnv_tap` - 定义一个用于 `UITapGestureRecognizer` 的回调方法
 
 
-####UIView
+#### UIView
 - `setFrame` - 为 `UIView` 设置 `frame`
 - `setFrame_QMUI` - QMUI 使用像素对齐的 `CGRectFlatMake()` 为 `UIView` 设置 `frame`
 - `setFrameX` - QMUI 使用 `CGRectSetX()` 修改 `UIView` 的 `frame.origin.x`
@@ -102,7 +102,7 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 - `setTitleColorForButton` - 为 `UIButton` 设置文字颜色
 - `setTitleForButton` - 为 `UIButton` 设置文字
 
-####UITableView
+#### UITableView
 - `initWithStyle` - 展开 `initWithStyle:` 方法
 - `initWithStyleForCell` - 展开 `UITableViewCell initWithStyle:reuseIdentifier:` 方法
 - `tableViewDelegate` - 展开常用的几个 `UITableViewDelegate` 方法
@@ -113,7 +113,7 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 - `didSelectRowAtIndexPath` - 展开 `tableView:didSelectRowAtIndexPath:` 方法
 
 
-####UICollectionView
+#### UICollectionView
 - `collectionViewDelegate` - 展开常用的几个`UICollectionViewDelegate` 方法
 - `numberOfSectionsInCollectionView` - 展开 `numberOfSectionsInCollectionView:`
 - `numberOfItemsInSection` - 展开 `collectionView:numberOfItemsInSection:`
@@ -123,7 +123,7 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 - `didDeselectItemAtIndexPath` - 展开 `collectionView:didDeselectItemAtIndexPath:` 方法
 
 
-####UIViewController
+#### UIViewController
 - `loadView` - 展开 `loadView` 方法
 - `viewDidLoad` - 展开 `viewDidLoad` 方法
 - `viewWillAppear` - 展开 `viewWillAppear:` 方法
@@ -141,7 +141,7 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 - `rightBarButtonItemImage` - QMUI 用 `QMUINavigationButton` 的方法创建一个用于 `navigationItem.rightBarButtonItem` 的 `UIBarButtonItem`
 
 
-####Other
+#### Other
 - `pragma` - 展开一个用于 Xcode 导航的 `#pragma mark -` 宏
 - `externRefInH` - 在 `*.h` 文件里声明一个 `extern const` 的指针
 - `externRefInM` - 在 `*.m` 文件里为一个 `extern const` 的指针赋值
@@ -154,3 +154,6 @@ Xcode 的 Code Snippets 文件存放于 `~/Library/Developer/Xcode/UserData/Code
 - `logCallStackSymbols` - 用 `NSLog` 打出当前的方法调用栈信息
 - `timeConsuming` - 展开一段用 `CACurrentMediaTime()` 来计算方法耗时的代码
 
+# 链接
+GitHub：[https://github.com/Sdfeidong/iOS_CodeSnippets](https://github.com/Sdfeidong/iOS_CodeSnippets)
+博客地址：[http://blog.csdn.net/aaidong/article/details/78770671](http://blog.csdn.net/aaidong/article/details/78770671)
